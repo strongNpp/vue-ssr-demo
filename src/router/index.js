@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import PcMain from "../components/main/index.vue"; //页面布局
 
 Vue.use(Router)
 
 // route-level code splitting
-const Index = () => import('../views/index.vue')
+
+const Main = PcMain; //区分pc和手机引入不同布局
 
 export function createRouter() {
   return new Router({
@@ -12,7 +14,14 @@ export function createRouter() {
     fallback: false,
     scrollBehavior: () => ({ y: 0 }),
     routes: [
-      { path: '/:page?', name: 'Index', component: Index }
+      {
+        path: "/home",
+        redirect: "/",
+        component: Main,
+        children: [
+          { path: '/:page?', alias: '/', name: 'Index', component: () => import('../views/index.vue') },
+        ]
+      }
     ]
   })
 }

@@ -1,9 +1,18 @@
 <template>
   <div id="app">
-    <router-view class="view" />
+    <router-view></router-view>
   </div>
 </template>
-
+<script>
+export default {
+  name: "App",
+  watch: {},
+  created() {},
+  mounted() {},
+};
+</script>
 <style>
-
+html,body,#app{
+  height: 100%;
+}
 </style>

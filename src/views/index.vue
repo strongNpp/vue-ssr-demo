@@ -6,13 +6,7 @@
         <p>{{ item.title }}</p>
       </div>
     </div>
-    <el-pagination
-      layout="prev, pager, next"
-      :page-size="5"
-      :current-page="pageGetter.current_page"
-      :total="pageGetter.count"
-      @current-change="handleCurrentChange"
-    />
+    <el-pagination  layout="prev, pager, next"  :page-size="5"   :current-page="pageGetter.current_page"  :total="pageGetter.count"  @current-change="handleCurrentChange" />
 
   </div>
 </template>
