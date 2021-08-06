@@ -1,6 +1,6 @@
-# vue-hackernews-demo 
+# vue-ssr-demo 
 
-> `vue-hackernews-2.0`支持服务端渲染，此demo是用`vue-hackernews-2.0`做的，主要用于了解服务端渲染。
+>此demo是用`vue-hackernews-2.0`做的，主要用于了解服务端渲染。
 
 ## 项目启动
 
